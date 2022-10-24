@@ -1,0 +1,177 @@
+<h2 center style="text-align:center">LISTADO DE PROSPECTOS</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>ID CLIENTE</th>
+      <th>Nombre</th>
+      <th>Primer Apellido</th>
+      <th>Segundo Apellido</th>
+      <th>Estatus del prospecto</th>
+      <th>Detalles prospecto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{cliente.idcliente}}</td>
+      <td>{{cliente.nombreProspecto}}</td>
+      <td>{{cliente.primerApellido}}</td>
+      <td>{{cliente.segundoApellido}}</td>
+      <td>{{cliente.statusProspecto}}</td>
+      <td>
+
+
+
+        <ng-template #contenido let-modal>
+          <div class="modal-header">
+              <h4 class="modal-title">DETALLES:</h4>
+
+              <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+
+
+          <div class="modal-body">
+
+            <form (ngSubmit)="getIdcliente(this.idcliente.value,this.nombreProspecto.value,this.primerApellido.value,
+            this.segundoApellido.value,this.calle.value,this.numero.value,this.colonia.value,
+            this.codigoPostal.value,this.telefono.value,this.rfc.value,this.documentos.value,this.statusProspecto.value,this.observacion.value,this.opcion.value)" id="actualizar" >
+
+                <div class="col-md-12">
+                  <input  #idcliente  type="text" [(ngModel)]="cliente.idcliente" [ngModelOptions]="{standalone:true}" placeholder="ID CLIENTE" class="form-control" disabled>
+                </div>
+
+              <br>
+
+                <div class="col-md-12">
+                  <input #nombreProspecto type="text" [(ngModel)]="cliente.nombreProspecto" [ngModelOptions]="{standalone:true}" placeholder="Nombre del prospecto" class="form-control" disabled>
+                </div>
+
+            <br>
+
+                <div class="col-md-12">
+                  <input #primerApellido type="text" [(ngModel)]="cliente.primerApellido" [ngModelOptions]="{standalone:true}" placeholder="Primer Apellido" class="form-control" disabled>
+                </div>
+
+            <br>
+
+              <div class="col-md-12">
+                <input #segundoApellido type="text" [(ngModel)]="cliente.segundoApellido" [ngModelOptions]="{standalone:true}" placeholder="Segundo Apellido" class="form-control" disabled>
+              </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #calle type="text" [(ngModel)]="cliente.calle" [ngModelOptions]="{standalone:true}" placeholder="Calle" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #numero type="text" [(ngModel)]="cliente.numero" [ngModelOptions]="{standalone:true}" placeholder="Numero" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #colonia type="text" [(ngModel)]="cliente.colonia" [ngModelOptions]="{standalone:true}" placeholder="Colonia" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #codigoPostal type="text" [(ngModel)]="cliente.codigopostal" [ngModelOptions]="{standalone:true}" placeholder="Codigo Postal" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #telefono type="text" [(ngModel)]="cliente.telefono" [ngModelOptions]="{standalone:true}" placeholder="Telefono" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #rfc type="text" [(ngModel)]="cliente.rfc" [ngModelOptions]="{standalone:true}" placeholder="Rfc" class="form-control" disabled>
+            </div>
+
+          <br>
+
+            <div class="col-md-12">
+              <input #documentos type="text" [(ngModel)]="cliente.documentos" [ngModelOptions]="{standalone:true}" placeholder="documentos" class="form-control" disabled>
+            </div>
+
+          <br>
+
+
+            <div class="col-md-12">
+              <input #statusProspecto type="text" [(ngModel)]="cliente.statusProspecto" [ngModelOptions]="{standalone:true}" placeholder="ESTATUS:" class="form-control" disabled>
+            </div>
+
+          <br>
+
+          <div class="col-md-12">
+            <input #observacion type="text" [(ngModel)]="cliente.observacion" [ngModelOptions]="{standalone:true}" placeholder="observacion" class="form-control" required>
+          </div>
+          <br>
+
+
+          <select #opcion class="form-select" aria-label="Default select example">
+            <option selected>AUTORIZACION:</option>
+            <option value="1" >AUTORIZAR</option>
+            <option value="2" >RECHAZAR</option>
+          </select>
+<br>
+
+
+
+              <div class="col-md-12">
+                <input class="btn btn-success float-right" type="submit" value="ENVIAR" (click)="modal.close()"  http-equiv="refresh">
+              </div>
+
+            </form>
+
+            <table class="table">
+              <thead class="table table-sm">
+
+              <tbody>
+
+
+
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-success" (click)="modal.close()">CANCELAR</button>
+          </div>
+      </ng-template>
+
+      <button type="button" class="btn btn-outline-warning" (click)="openScroll(contenido)">DETALLES</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

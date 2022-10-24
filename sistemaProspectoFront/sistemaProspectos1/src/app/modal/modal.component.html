@@ -1,0 +1,90 @@
+<h2 center style="text-align:center">LISTADO DE PROSPECTOS</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Primer Apellido</th>
+      <th>Segundo Apellido</th>
+      <th>Estatus del prospecto</th>
+      <th>Detalles prospecto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{cliente.nombreProspecto}}</td>
+      <td>{{cliente.primerApellido}}</td>
+      <td>{{cliente.segundoApellido}}</td>
+      <td>{{cliente.statusProspecto}}</td>
+      <td>
+
+
+
+        <ng-template #contenido let-modal>
+          <div class="modal-header">
+              <h4 class="modal-title">DETALLES:</h4>
+
+              <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+
+
+          <div class="modal-body">
+
+
+
+            <table class="table">
+              <thead class="table table-sm">
+            <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Primer apellido</th>
+            <th scope="col">Segundo apellido</th>
+            <th scope="col">Calle</th>
+            <th scope="col">Numero</th>
+            <th scope="col">Colonia</th>
+            <th scope="col">Codigo postal</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Documentos</th>
+            <th scope="col">Estatus</th>
+            </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngIf="clientes">
+                  <th scope="row">{{cliente.nombreProspecto}}</th>
+                  <th>{{cliente.primerApellido}}</th>
+                  <th>{{cliente.segundoApellido}}</th>
+                  <th>{{cliente.calle}}</th>
+                  <th>{{cliente.numero}}</th>
+                  <th>{{cliente.colonia}}</th>
+                  <th>{{cliente.codigoPostal}}</th>
+                  <th>{{cliente.telefono}}</th>
+                  <th>{{cliente.documentos}}</th>
+                  <th>{{cliente.statusProspecto}}</th>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-success" (click)="modal.close()">ACEPTAR</button>
+          </div>
+      </ng-template>
+
+      <button type="button" class="btn btn-outline-warning" (click)="openScroll(contenido)">DETALLES</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+

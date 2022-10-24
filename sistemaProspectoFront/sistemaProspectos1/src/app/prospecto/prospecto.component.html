@@ -1,0 +1,119 @@
+<div class="container">
+  <div class= "row">
+  <div class="col-md-12">
+  <h1 style="text-align:center">CAPTURA DE PROSPECTO</h1>
+  </div>
+  <div class="col-md-12">
+    <hr>
+  </div>
+  </div>
+  <div class="row" *ngIf="loading">
+    <div class="col-md-12">
+      <div class="spinner-border text-info float-right" role="status">
+        <span class="sr-only">CARGANDO....</span>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <form (ngSubmit)="crear()" id="crear">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" [(ngModel)]="prospecto.nombreProspecto" [ngModelOptions]="{standalone:true}" placeholder="Nombre del Prospecto" class="form-control" required>
+      </div>
+
+
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" [(ngModel)]="prospecto.primerApellido" [ngModelOptions]="{standalone:true}" placeholder="Primer Apellido" class="form-control" required>
+      </div>
+    </div>
+  <br>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" [(ngModel)]="prospecto.segundoApellido" [ngModelOptions]="{standalone:true}" placeholder="Segundo Apellido" class="form-control" required>
+    </div>
+  </div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.calle" [ngModelOptions]="{standalone:true}" placeholder="Calle" class="form-control" required>
+  </div>
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.numero" [ngModelOptions]="{standalone:true}" placeholder="Numero" class="form-control" required>
+  </div>
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.colonia" [ngModelOptions]="{standalone:true}" placeholder="Colonia" class="form-control" required>
+  </div>
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.codigopostal" [ngModelOptions]="{standalone:true}" placeholder="Codigo Postal" class="form-control" required>
+  </div>
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.telefono" [ngModelOptions]="{standalone:true}" placeholder="Telefono" class="form-control" required>
+  </div>
+</div>
+<br>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.rfc" [ngModelOptions]="{standalone:true}" placeholder="Rfc" class="form-control" required>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="file" (change)="uploadImage($event)" multiple="" placeholder="Documentos" class="form-control" required>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="prospecto.statusProspecto" [ngModelOptions]="{standalone:true}" placeholder="ESTATUS:" class="form-control" disabled>
+  </div>
+</div>
+<br>
+
+
+<br>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <input class="btn btn-success float-right" type="submit" value="Ingresar">
+    </div>
+  </div>
+  </form>
+  <br>
+
+
+  </div>

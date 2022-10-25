@@ -17,7 +17,6 @@ export class EvaluacionprospectoComponent implements OnInit {
   clientes:any={};
   clientes2:any={};
   loading:boolean=false;
-  valor:any;
 
 
 

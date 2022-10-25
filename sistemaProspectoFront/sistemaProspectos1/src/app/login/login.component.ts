@@ -35,7 +35,14 @@ iniciarSesion(resultado:any){
 
 if(resultado){
 localStorage.setItem("usuario",JSON.stringify(resultado));
-location.href="/prospecto"
+
+if(resultado.rol_idrol==1){
+  location.href="/evaluacionprospecto"
+}else{
+  location.href="/prospecto"
+}
+
+
 }else{
   //si es nulo
   this.errorInicio=true;

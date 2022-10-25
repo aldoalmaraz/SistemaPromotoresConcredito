@@ -13,13 +13,15 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './modal/modal.component';
 import { EvaluacionprospectoComponent } from './evaluacionprospecto/evaluacionprospecto.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProspectoComponent,
     ModalComponent,
-    EvaluacionprospectoComponent
+    EvaluacionprospectoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

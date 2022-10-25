@@ -17,6 +17,8 @@ export class EvaluacionprospectoComponent implements OnInit {
   clientes:any={};
   clientes2:any={};
   loading:boolean=false;
+  usuario:any;
+  objUsuario:any={};
 
 
 
@@ -25,6 +27,18 @@ export class EvaluacionprospectoComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.usuario=localStorage.getItem('usuario');
+    this.objUsuario = JSON.parse(this.usuario);
+
+    if(this.objUsuario.rol_idrol==1){
+
+
+    }
+    else{
+      alert("ERROR: SOLO LOS ADMINISTRADORES PUEDEN ACCEDER A ESTE APARTADO")
+      location.href="/prospecto"
+    }
+
  this.buscarClientes();
   }
 
@@ -101,8 +115,6 @@ buscarClientes(){
             'Content-Type':'application/json'
           })
         }
-        console.log("----------------")
-        console.log(this.clientes2)
         return this.http.post<any>("http://localhost:3030/cliente/guardar",this.clientes2,httpOptions);
       }
 

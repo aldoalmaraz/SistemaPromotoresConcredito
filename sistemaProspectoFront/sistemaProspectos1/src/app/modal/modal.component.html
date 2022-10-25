@@ -28,11 +28,11 @@
 
         <ng-template #contenido let-modal>
           <div class="modal-header">
-              <h4 class="modal-title">DETALLES:</h4>
+            <h4 class="modal-title">DETALLES:</h4>
 
-              <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
-                  <span aria-hidden="true">&times;</span>
-              </button>
+            <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
 
 
@@ -43,18 +43,19 @@
 
             <table class="table">
               <thead class="table table-sm">
-            <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Primer apellido</th>
-            <th scope="col">Segundo apellido</th>
-            <th scope="col">Calle</th>
-            <th scope="col">Numero</th>
-            <th scope="col">Colonia</th>
-            <th scope="col">Codigo postal</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Documentos</th>
-            <th scope="col">Estatus</th>
-            </tr>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Primer apellido</th>
+                  <th scope="col">Segundo apellido</th>
+                  <th scope="col">Calle</th>
+                  <th scope="col">Numero</th>
+                  <th scope="col">Colonia</th>
+                  <th scope="col">Codigo postal</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Documentos</th>
+                  <th scope="col">Estatus</th>
+                  <th scope="col">observacion</th>
+                </tr>
               </thead>
 
               <tbody>
@@ -69,6 +70,7 @@
                   <th>{{cliente.telefono}}</th>
                   <th>{{cliente.documentos}}</th>
                   <th>{{cliente.statusProspecto}}</th>
+                  <th>{{cliente.observacion}}</th>
                 </tr>
               </tbody>
 
@@ -76,22 +78,13 @@
 
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-success" (click)="modal.close()">ACEPTAR</button>
+            <button type="button" class="btn btn-success" (click)="modal.close()">ACEPTAR</button>
           </div>
-      </ng-template>
+        </ng-template>
 
-      <button type="button" class="btn btn-outline-warning" (click)="openScroll(contenido)">DETALLES</button>
+        <button type="button" class="btn btn-outline-warning" (click)="openScroll(contenido)">DETALLES</button>
 
       </td>
     </tr>
   </tbody>
 </table>
-
-
-
-
-
-
-
-
-

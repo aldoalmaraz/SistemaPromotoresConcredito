@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
+
+usuario:any;
 
   constructor() { }
 
@@ -17,5 +20,7 @@ export class NavbarComponent implements OnInit {
     console.log("metodo con exito")
     location.href="/"
   }
+
+
 
 }

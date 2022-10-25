@@ -7,11 +7,11 @@ import { EvaluacionprospectoComponent } from './evaluacionprospecto/evaluacionpr
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
-  {path:'prospecto',component:ProspectoComponent},
-  {path:'modal',component:ModalComponent},
-  {path:'evaluacionprospecto',component:EvaluacionprospectoComponent},
-  {path:'navbar',component:NavbarComponent}
+  { path: '', component: LoginComponent },
+  { path: 'prospecto', component: ProspectoComponent },
+  { path: 'modal', component: ModalComponent },
+  { path: 'evaluacionprospecto', component: EvaluacionprospectoComponent },
+  { path: 'navbar', component: NavbarComponent }
 ];
 
 @NgModule({

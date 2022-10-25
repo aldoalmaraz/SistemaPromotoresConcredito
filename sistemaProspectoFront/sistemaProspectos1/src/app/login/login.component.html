@@ -1,50 +1,40 @@
-<div class="container">
-<div class= "row">
-<div class="col-md-12">
-<h1 style="text-align:center">LOGIN PROMOTORES</h1>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>APPLICACION<br> Login Page</h2>
+    <p>SISTEMA DE PROSPECTOS V0.1.</p>
+  </div>
 </div>
-<div class="col-md-12">
-  <hr>
-</div>
-</div>
-<div class="row" *ngIf="loading">
-  <div class="col-md-12">
-    <div class="spinner-border text-info float-right" role="status">
-      <span class="sr-only">CARGANDO...</span>
+
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+
+    <div class="login-form">
+      <form (ngSubmit)="login()" id="login">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" class="form-control" placeholder="Usuario" [(ngModel)]="usuario.nombre"
+            [ngModelOptions]="{standalone:true}" required>
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" class="form-control" placeholder="Contraseña" [(ngModel)]="usuario.pass"
+            [ngModelOptions]="{standalone:true}" required>
+        </div>
+        <button type="submit" class="btn btn-black">Login</button>
+      </form>
+      <br>
+
+      <div class="row" *ngIf="errorInicio">
+        <label class="float-right" style="color:brown;">ERROR: Usuario o contraseña invalidos</label>
+      </div>
     </div>
   </div>
-  <br>
-  <br>
 </div>
-<form (ngSubmit)="login()" id="login">
-  <div class="row">
-    <div class="col-md-12">
-      <input type="text" [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone:true}" placeholder="Usuario Promotor" class="form-control" required>
-    </div>
 
 
-  </div>
-  <br>
-
-  <div class="row">
-    <div class="col-md-12">
-      <input type="password" [(ngModel)]="usuario.pass" [ngModelOptions]="{standalone:true}" placeholder="Contraseña" class="form-control" required>
-    </div>
-  </div>
-<br>
-
-<div class="row">
-  <div class="col-md-12">
-    <input class="btn btn-success float-right" type="submit" value="Ingresar" >
-  </div>
-</div>
-</form>
-<br>
-
-<div class="row" *ngIf="errorInicio">
-  <div class="col-md-12">
-    <label class="float-right" style="color:brown;">Usuario o password incorrecto</label>
-     </div>
-
-</div>
-</div>

@@ -1,4 +1,4 @@
-package com.app.sistemaProspecto.service;
+package com.app.sistemaProspecto.controller;
 
 import com.app.sistemaProspecto.entity.Rol;
 import com.app.sistemaProspecto.repository.RolRepository;
@@ -13,7 +13,7 @@ import java.util.Optional;
 @RequestMapping("/rol")
 @CrossOrigin
 
-public class RolService {
+public class RolController {
     @Autowired
     private RolRepository rolRepository;
 

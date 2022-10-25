@@ -1,6 +1,6 @@
 package com.app.sistemaProspecto.repository;
 
-import com.app.sistemaProspecto.entity.Cliente;
+import com.app.sistemaProspecto.entity.Prospecto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,8 +8,8 @@ import java.io.Serializable;
 import java.util.List;
 
 @Repository("clienteRepository")
-public interface ClienteRepository extends JpaRepository<Cliente, Serializable> {
+public interface ProspectoRepository extends JpaRepository<Prospecto, Serializable> {
 
-    public List<Cliente> findByNombreProspecto(String nombreProspecto);
+    public List<Prospecto> findByNombreProspecto(String nombreProspecto);
 
 }

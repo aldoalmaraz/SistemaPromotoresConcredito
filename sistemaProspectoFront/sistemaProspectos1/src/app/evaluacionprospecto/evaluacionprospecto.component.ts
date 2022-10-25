@@ -27,9 +27,12 @@ export class EvaluacionprospectoComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.usuario=localStorage.getItem('usuario');
     this.objUsuario = JSON.parse(this.usuario);
-
+if(!this.objUsuario){
+  location.href="/"
+}
     if(this.objUsuario.rol_idrol==1){
 
 

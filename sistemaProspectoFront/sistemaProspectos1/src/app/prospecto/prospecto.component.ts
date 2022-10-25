@@ -13,12 +13,17 @@ export class ProspectoComponent implements OnInit {
   loading: any;
   prospecto: any = {};
   usuario: any;
+  objUsuario:any={};
 
   constructor(private http: HttpClient, private storage: Storage) { }
 
   ngOnInit(): void {
 
-
+    this.usuario=localStorage.getItem('usuario');
+    this.objUsuario = JSON.parse(this.usuario);
+if(!this.objUsuario){
+  location.href="/"
+}
   }
 
 

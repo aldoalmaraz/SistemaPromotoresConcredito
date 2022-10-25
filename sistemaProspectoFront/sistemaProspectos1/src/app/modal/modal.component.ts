@@ -15,7 +15,8 @@ import { catchError } from 'rxjs/operators'
 export class ModalComponent implements OnInit {
   clientes: any = {};
   loading: boolean = false;
-  valor: any;
+  usuario:any;
+  objUsuario:any={};
 
 
 
@@ -23,6 +24,11 @@ export class ModalComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.usuario=localStorage.getItem('usuario');
+    this.objUsuario = JSON.parse(this.usuario);
+if(!this.objUsuario){
+  location.href="/"
+}
     this.buscarClientes();
   }
 

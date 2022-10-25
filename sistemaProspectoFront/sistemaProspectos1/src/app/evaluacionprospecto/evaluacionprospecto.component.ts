@@ -89,10 +89,6 @@ buscarClientes(){
       this.clientes2.statusProspecto="RECHAZADO";
     }
 
-
-
-    console.log("Metodo getIdcliente obtiene : "+this.clientes2.idCliente)
-    console.log("Metodo getIdcliente obtiene : "+this.clientes2.nombreProspecto)
     this.ActualizarProspecto(this.clientes2);
 
   }

@@ -17,7 +17,6 @@ usuario:any;
 
   cerrarSesion(){
     localStorage.clear();
-    console.log("metodo con exito")
     location.href="/"
   }
 

@@ -47,12 +47,12 @@ export class ProspectoComponent implements OnInit {
     this.loading = false;
 
     if (resultado) {
-      alert("usuario creado con exito!")
+      alert("¡EL PROSPECTO SE ENVIO CON EXITO!")
       this.prospecto = {};
 
     } else {
       //si es nulo
-      alert("error al crear al usuario!")
+      alert("ERROR: ¡¡EL PROSPECTO NO SE ENVIO!!")
     }
   }
 

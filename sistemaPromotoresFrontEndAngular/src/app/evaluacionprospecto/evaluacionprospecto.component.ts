@@ -121,12 +121,12 @@ buscarClientes(){
         this.loading=false;
 
       if(resultado){
-   alert("usuario creado con exito!")
+   alert("AUTORIZACION CON OBSERVACIONES ENVIADA CON EXITO!!")
 
 
       }else{
         //si es nulo
-        alert("error al crear al usuario!")
+        alert("ERROR: FAVOR DE VERIFICAR BIEN LA INFORMACION ")
       }
       }
 
